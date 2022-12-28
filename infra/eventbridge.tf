@@ -24,7 +24,7 @@ resource "aws_cloudwatch_event_rule" "this" {
 # }
 
 resource "aws_cloudwatch_log_group" "this" {
-  name = "/eventbridge/events/${module.fn-on-demand-scale-in-out.function_name}"
+  name = "/aws/events/${aws_cloudwatch_event_rule.this.name}"
 }
 
 data "aws_iam_policy_document" "this" {

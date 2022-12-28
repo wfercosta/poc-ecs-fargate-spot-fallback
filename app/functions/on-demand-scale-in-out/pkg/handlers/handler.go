@@ -12,9 +12,9 @@ type Handler interface {
 func NewHandler(context context.Context, event Event) (Handler, error) {
 	switch e := event.EventType; e {
 	case "SERVICE_TASK_PLACEMENT_FAILURE":
-		return taskPlacementFailureHandler{context, event}, nil
+		return HandlerServiceTaskPlacementFailure{context, event}, nil
 	case "SERVICE_STEADY_STATE":
-		return steadyStateHandler{context, event}, nil
+		return HandlerServiceSteadyState{context, event}, nil
 	default:
 		return nil, &EventTypeNotSupportedError{
 			EventType: e,
