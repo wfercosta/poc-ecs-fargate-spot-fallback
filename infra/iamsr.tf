@@ -7,15 +7,16 @@ module "iamsr" {
   }
 
   policies = {
-    policy-cloudwatch-logs = "./_iamsr/policies/policy-cloudwatch-logs.tftpl"
+    policy-cloudwatch-logs = "./_iamsr/policies/policy-cloudwatch-logs.tftpl",
+    policy-lambda-invoke   = "./_iamsr/policies/policy-lambda-invoke.tftpl",
   }
 
   roles = {
-    lambda-function = {
+    lambda-function-role = {
       trust_role = "./_iamsr/assume_roles/trust-lambda.tftpl"
       policies_attachments = [
         "arn:aws:iam::${local.account_id}:policy/policy-cloudwatch-logs",
       ]
-    }
+    },
   }
 }
