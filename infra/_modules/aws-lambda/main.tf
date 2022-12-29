@@ -15,7 +15,7 @@ resource "aws_lambda_function" "this" {
   handler          = var.function_handler
   role             = var.execution_role_arn
   source_code_hash = filebase64sha256(data.archive_file.this.output_path)
-  runtime          = "go1.x"
+  runtime          = var.runtime
   memory_size      = 1024
   timeout          = 30
 }

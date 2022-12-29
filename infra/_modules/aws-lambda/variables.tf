@@ -14,3 +14,7 @@ variable "execution_role_arn" {
 variable "source_file" {
   type = string
 }
+
+variable "runtime" {
+  type = string
+}
