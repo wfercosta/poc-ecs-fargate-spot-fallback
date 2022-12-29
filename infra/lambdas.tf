@@ -29,7 +29,17 @@ module "fn2" {
 }
 
 
-resource "aws_api_gateway_rest_api" "example" {
+resource "aws_lambda_permission" "this" {
+  statement_id  = "allow-apigateway-post-execution"
+  action        = "lambda:InvokeFunction"
+  function_name = module.fn1.function_name
+  principal     = "apigateway.amazonaws.com"
+
+  # More: http://docs.aws.amazon.com/apigateway/latest/developerguide/api-gateway-control-access-using-iam-policies-to-invoke-api.html
+  source_arn = "arn:aws:execute-api:${local.region}:${local.account_id}:${aws_api_gateway_rest_api.this.id}/*/POST/users"
+}
+
+resource "aws_api_gateway_rest_api" "this" {
   name = "example"
   body = templatefile("./_templates/apigateway-openapi.tfpl", {
     account_id = local.account_id,
@@ -40,4 +50,22 @@ resource "aws_api_gateway_rest_api" "example" {
   endpoint_configuration {
     types = ["REGIONAL"]
   }
+}
+
+resource "aws_api_gateway_deployment" "this" {
+  rest_api_id = aws_api_gateway_rest_api.this.id
+
+  triggers = {
+    redeployment = sha1(jsonencode(aws_api_gateway_rest_api.this.body))
+  }
+
+  lifecycle {
+    create_before_destroy = true
+  }
+}
+
+resource "aws_api_gateway_stage" "this" {
+  deployment_id = aws_api_gateway_deployment.this.id
+  rest_api_id   = aws_api_gateway_rest_api.this.id
+  stage_name    = "dev"
 }
