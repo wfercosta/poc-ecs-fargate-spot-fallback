@@ -1,6 +1,6 @@
 # Solution Overview
 
-![solution overview](./docs/diagrams.drawio.png "solution overview")
+![solution overview](./docs/diagrams.png "solution overview")
 
 # How to test
 
