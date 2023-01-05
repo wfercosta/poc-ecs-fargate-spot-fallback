@@ -8,7 +8,6 @@ module "iamsr" {
 
   policies = {
     policy-cloudwatch-logs = "./_iamsr/policies/policy-cloudwatch-logs.tftpl",
-    policy-lambda-invoke   = "./_iamsr/policies/policy-lambda-invoke.tftpl",
     policy-ecs             = "./_iamsr/policies/policy-ecs.tfpl"
   }
 
