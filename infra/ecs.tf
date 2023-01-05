@@ -52,7 +52,7 @@ resource "aws_ecs_service" "ondemand" {
   name            = "httpbin-service-fargate-fallback-ondemand"
   cluster         = aws_ecs_cluster.this.name
   task_definition = aws_ecs_task_definition.this.arn
-  desired_count   = 1
+  desired_count   = 0
 
   capacity_provider_strategy {
     capacity_provider = "FARGATE"

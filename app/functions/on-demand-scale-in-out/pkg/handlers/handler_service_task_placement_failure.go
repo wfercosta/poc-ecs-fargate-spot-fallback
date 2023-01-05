@@ -22,7 +22,7 @@ func (h HandlerServiceTaskPlacementFailure) Handle() error {
 		return fmt.Errorf("Handle: erro while trying to get client instance: %s", err)
 	}
 
-	counts, err := client.ObtainServiceCounts(h.event.PrimaryServiceArn)
+	counts, err := client.ObtainServiceCounts(h.event.PrimaryServiceArn, h.event.ClusterArn)
 
 	if err != nil {
 		return fmt.Errorf("Handle: error while trying to get service %s counts: %s",
@@ -30,16 +30,17 @@ func (h HandlerServiceTaskPlacementFailure) Handle() error {
 			err)
 	}
 
-	deltaCount := (counts.DesiredCount - counts.RunningCount)
+	deltaCount := (counts.DesiredCount - counts.RunningCount) + 1
 	desiredCount := deltaCount + int64((math.Ceil(float64(deltaCount) * 1.2)))
 
 	log.Printf("Handle: New desired count set to %d for service %s",
-		deltaCount,
+		desiredCount,
 		h.event.SecondaryServiceArn)
 
 	if err :=
 		client.UpdateServiceDesiredCount(
 			h.event.SecondaryServiceArn,
+			h.event.ClusterArn,
 			desiredCount); err != nil {
 
 		return fmt.Errorf("Handle: error while trying to update the desired count for service %s: %s",

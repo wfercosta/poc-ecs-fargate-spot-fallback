@@ -21,7 +21,7 @@ func (h HandlerServiceSteadyState) Handle() error {
 	}
 
 	if err :=
-		client.UpdateServiceDesiredCount(h.event.SecondaryServiceArn, 0); err != nil {
+		client.UpdateServiceDesiredCount(h.event.SecondaryServiceArn, h.event.ClusterArn, 0); err != nil {
 
 		return fmt.Errorf("Handle: error while trying to update the desired count for service %s: %s",
 			h.event.SecondaryServiceArn,

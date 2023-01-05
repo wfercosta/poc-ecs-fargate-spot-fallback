@@ -5,4 +5,5 @@ type Event struct {
 	EventType           string `json:"event_type"`
 	PrimaryServiceArn   string `json:"primary_service_arn"`
 	SecondaryServiceArn string `json:"secondary_service_arn"`
+	ClusterArn          string `json:"cluster_arn"`
 }

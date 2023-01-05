@@ -9,6 +9,7 @@ module "iamsr" {
   policies = {
     policy-cloudwatch-logs = "./_iamsr/policies/policy-cloudwatch-logs.tftpl",
     policy-lambda-invoke   = "./_iamsr/policies/policy-lambda-invoke.tftpl",
+    policy-ecs             = "./_iamsr/policies/policy-ecs.tfpl"
   }
 
   roles = {
@@ -16,6 +17,7 @@ module "iamsr" {
       trust_role = "./_iamsr/assume_roles/trust-lambda.tftpl"
       policies_attachments = [
         "arn:aws:iam::${local.account_id}:policy/policy-cloudwatch-logs",
+        "arn:aws:iam::${local.account_id}:policy/policy-ecs"
       ]
     },
     esc-task-execution-role = {

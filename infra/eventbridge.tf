@@ -52,6 +52,7 @@ resource "aws_cloudwatch_event_target" "lambda" {
     input_template = templatefile("./_templates/eventbridge_input_template.tftpl", {
       primary_service_arn   = aws_ecs_service.spot.id,
       secondary_service_arn = aws_ecs_service.ondemand.id,
+      cluster_arn           = aws_ecs_cluster.this.arn
     })
   }
 }
