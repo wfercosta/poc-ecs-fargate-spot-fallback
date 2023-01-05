@@ -26,10 +26,10 @@
 
 ```
 
-Event Detail Type: "ECS Service Action"
-Event source: "test"
-Event Resource: arn:aws:ecs:us-east-1:175898361931:service/demo/httpbin-service-fargate
-Event detail:
+**Event Detail Type:** "ECS Service Action"
+**Event source:** "test"
+**Event Resource:** arn:aws:ecs:us-east-1:175898361931:service/demo/httpbin-service-fargate
+**Event detail:**
 
 ```
 {
