@@ -1,3 +1,7 @@
+# Solution Overview
+
+![solution overview](./docs/diagrams.drawio.png "solution overview")
+
 ```
 {
     "version": "0",
