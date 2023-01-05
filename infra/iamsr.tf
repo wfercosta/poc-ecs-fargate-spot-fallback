@@ -18,5 +18,11 @@ module "iamsr" {
         "arn:aws:iam::${local.account_id}:policy/policy-cloudwatch-logs",
       ]
     },
+    esc-task-execution-role = {
+      trust_role = "./_iamsr/assume_roles/trust-ecs.tftpl"
+      policies_attachments = [
+        "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+      ]
+    }
   }
 }
