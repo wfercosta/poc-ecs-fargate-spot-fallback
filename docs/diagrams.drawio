@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Dt7nxPciHHHotf-U6eUs" name="Page-1">
-        <mxGraphModel dx="1639" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1685" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -234,8 +234,8 @@
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-111" value="&lt;h1&gt;Event Handler&lt;/h1&gt;&lt;p&gt;One lambda for each account, responsible to handle events for &quot;Placement failure&quot; and &quot;Steady State&quot; for all services that uses Fargate Spot as the main capacity strategy.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="1250" y="594" width="242.5" height="140" as="geometry"/>
                 </mxCell>
-                <mxCell id="2" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Gear.svg;" vertex="1" parent="1">
-                    <mxGeometry x="1058.88" y="481" width="31" height="31" as="geometry"/>
+                <mxCell id="3" value="" style="html=1;verticalLabelPosition=bottom;align=center;labelBackgroundColor=#ffffff;verticalAlign=top;strokeWidth=2;shadow=0;dashed=0;shape=mxgraph.ios7.icons.settings;fontStyle=0" vertex="1" parent="1">
+                    <mxGeometry x="1064.38" y="480" width="30" height="30" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
