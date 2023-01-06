@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Dt7nxPciHHHotf-U6eUs" name="Page-1">
-        <mxGraphModel dx="1576" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="1639" dy="607" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -131,8 +131,10 @@
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-85" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aPYfzz-ZaNKguBsQWeDp-75" target="aPYfzz-ZaNKguBsQWeDp-84" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
                 </mxCell>
-                <mxCell id="aPYfzz-ZaNKguBsQWeDp-99" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="aPYfzz-ZaNKguBsQWeDp-75" target="aPYfzz-ZaNKguBsQWeDp-97" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
+                <mxCell id="aPYfzz-ZaNKguBsQWeDp-99" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="aPYfzz-ZaNKguBsQWeDp-75" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1057.88" y="492.75" as="targetPoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-75" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#B0084D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.rule_3;" parent="1" vertex="1">
                     <mxGeometry x="910" y="370.5" width="40.15" height="35" as="geometry"/>
@@ -191,11 +193,10 @@
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-96" value="Secondary" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="400" y="463" width="60" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="aPYfzz-ZaNKguBsQWeDp-100" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="aPYfzz-ZaNKguBsQWeDp-97" target="aPYfzz-ZaNKguBsQWeDp-86" edge="1">
-                    <mxGeometry relative="1" as="geometry"/>
-                </mxCell>
-                <mxCell id="aPYfzz-ZaNKguBsQWeDp-97" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-gear-b-128.png;fillColor=none;" parent="1" vertex="1">
-                    <mxGeometry x="1057.88" y="484.5" width="33" height="33" as="geometry"/>
+                <mxCell id="aPYfzz-ZaNKguBsQWeDp-100" style="edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="aPYfzz-ZaNKguBsQWeDp-86" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1074.38" y="517.5" as="sourcePoint"/>
+                    </mxGeometry>
                 </mxCell>
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-98" value="Input message transform" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1" parent="1" vertex="1">
                     <mxGeometry x="1094.38" y="486" width="107.75" height="30" as="geometry"/>
@@ -232,6 +233,9 @@
                 </mxCell>
                 <mxCell id="aPYfzz-ZaNKguBsQWeDp-111" value="&lt;h1&gt;Event Handler&lt;/h1&gt;&lt;p&gt;One lambda for each account, responsible to handle events for &quot;Placement failure&quot; and &quot;Steady State&quot; for all services that uses Fargate Spot as the main capacity strategy.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
                     <mxGeometry x="1250" y="594" width="242.5" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="aspect=fixed;html=1;points=[];align=center;image;fontSize=12;image=img/lib/azure2/general/Gear.svg;" vertex="1" parent="1">
+                    <mxGeometry x="1058.88" y="481" width="31" height="31" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
